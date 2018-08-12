@@ -1,6 +1,6 @@
 # ionic踩坑之路
 
-> 版本: ionic@3, cordova@8.0.0, 安卓平台
+> 版本: Angular@5, ionic@3, cordova@8.0.0, 安卓平台
 
 ## 编译问题
 
