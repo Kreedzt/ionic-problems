@@ -37,3 +37,12 @@ ionic cordova platform add android@6.4.0 # 多半使用者也使用此版本
 ```
 
 [官方issue: 仍未解决](https://github.com/ionic-team/ionic/issues/13237)
+
+
+## 插件问题
+
+### 使用cordova原生插件方法(ionic没有情况下)
+
+### ionic插件问题
+
+- `Videogular`插件若无法正常工作, 需要制定版本.
