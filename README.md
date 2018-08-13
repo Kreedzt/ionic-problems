@@ -18,6 +18,17 @@ ionic cordova platform add android@6.4.0 # 多半使用者也使用此版本
 
 - 安卓平台编译后SDK限制不匹配问题
 
+在编译后的安卓平台内修改`build.gradle`文件
+
+末尾增加如下内容:
+```gradle
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.support:support-v4:27.1.0'
+    }
+}
+```
+
 ## 组件内方法问题
 
 - 下拉刷新问题(`ionRefresh`)
