@@ -54,6 +54,26 @@ configurations.all {
 
 ### 使用cordova原生插件方法(ionic没有情况下)
 
+使用时在前缀加上window即可。
+由于TypeScript代码检查，可能直接添加window会报错，前缀再加上`<any>`泛型即可：
+
+```TypeScript
+// 例：官方文档使用时直接使用plugin
+// 官方：
+plugins.xxx
+
+// 使用：
+(<any>)window.plugins.xxx
+
+// 官网文档使用时有cordova时：
+// 官方:
+cordova.plugins.xxx
+
+// 使用：
+(<any>)window.cordova.plugins.xxx
+```
+
+
 ### ionic插件问题
 
 - `Videogular`插件若无法正常工作, 需要制定版本为`6.1.1`
