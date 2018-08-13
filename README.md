@@ -45,4 +45,4 @@ ionic cordova platform add android@6.4.0 # 多半使用者也使用此版本
 
 ### ionic插件问题
 
-- `Videogular`插件若无法正常工作, 需要制定版本.
+- `Videogular`插件若无法正常工作, 需要制定版本为`6.1.1`
