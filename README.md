@@ -29,6 +29,14 @@ configurations.all {
 }
 ```
 
+### 编译时卸载/重添加平台报错问题
+
+- 使用`ionic cordova platform remove android`或卸载平台后使用`ionic cordova platform add anroid`添加平台报错
+
+    原因可能是没有管理员权限，若管理员打开后依旧报错，则可能是Cordova配置缓存没有删除（从提示可以看出）:
+    
+    通常定位目录到`C:\Users\lenovo\.config\configstore`内，删除所有文件，重新进行操作即可
+
 ## 组件内方法问题
 
 - 下拉刷新问题(`ionRefresh`)
@@ -50,9 +58,10 @@ configurations.all {
 [官方issue: 仍未解决](https://github.com/ionic-team/ionic/issues/13237)
 
 
+
 ## 插件问题
 
-### 使用cordova原生插件方法(ionic没有情况下)
+### 使用Cordova原生插件方法(ionic没有情况下)
 
 使用时在前缀加上window即可。
 由于TypeScript代码检查，可能直接添加window会报错，前缀再加上`<any>`泛型即可：
