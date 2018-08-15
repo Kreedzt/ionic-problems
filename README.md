@@ -41,7 +41,7 @@ configurations.all {
 
 - 下拉刷新问题(`ionRefresh`)
 
-使用官方提供的`Refresher`下拉刷新后, 当前`page`固定定位失效
+Q: 使用官方提供的`Refresher`下拉刷新后, 当前`page`固定定位失效
 
 官方API:
 
@@ -56,6 +56,27 @@ configurations.all {
 ```
 
 [官方issue: 仍未解决](https://github.com/ionic-team/ionic/issues/13237)
+   
+> 可以尝试使用ion-header尽力绕开该问题
+
+- Tabs的跳转问题
+
+```typescript
+// 使用如下代码时，跳转可能失效
+this.navCtrl.push(Page)
+```
+
+该问题可能是因为Tabs使用了懒加载，首次进入App时该页面为初始化，导致无法调用此页面的方法/无法直接路由跳转此页面
+
+因Tab的实现方式与子页面不同，非hash路由，所以此处只能使用官方的`select`方式跳转
+
+```typescript
+// 例：在Tabs跟页面下使用如下方式跳转，因为不是路由跳转，无法传递参数
+this.navCtrl.parent.select(2);
+```
+
+在非跟页面下时如上方法依旧无法跳转
+
 
 
 
