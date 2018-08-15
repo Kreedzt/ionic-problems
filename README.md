@@ -33,7 +33,7 @@ configurations.all {
 
 - 使用`ionic cordova platform remove android`或卸载平台后使用`ionic cordova platform add anroid`添加平台报错
 
-    原因可能是没有管理员权限，若管理员打开后依旧报错，则可能是ionic配置缓存没有删除（从提示可以看出）:
+    原因可能是没有管理员权限，若管理员打开后依旧报错，则可能是Cordova配置缓存没有删除（从提示可以看出）:
     
     通常定位目录到`C:\Users\lenovo\.config\configstore`内，删除所有文件，重新进行操作即可
 
